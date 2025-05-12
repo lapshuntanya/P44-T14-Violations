@@ -61,7 +61,7 @@ int main()
             cout << "Input number of car (AX0000AX): "; cin >> car;
             for (int i = 0; i < NDrivers; i++)
             {
-                if (stricmp(arrDrivers[i].carNumber, car) == 0) {
+                if (_stricmp(arrDrivers[i].carNumber, car) == 0) {
                     arrDrivers[i].printDriver();
                     cout << "Final fine: " << arrDrivers[i].calcTotalFines() << endl;
                     break;
