@@ -22,4 +22,8 @@ struct Violation
 		cin >> fine;
 	}
 
+	void printViol() {
+		cout << "\t Date: " << dateViol.toString() << " Fine: " << fine << "UAH. => " << info << endl;
+	}
+
 };
