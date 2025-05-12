@@ -10,7 +10,16 @@ struct Violation
 
 	//Методи
 	void fillViol() {
+		cout << "Input date of violation (dd mm yyyy): ";
+		//cin >> dateViol.day >> dateViol.month >> dateViol.year;
+		dateViol.fillDate(); // cout+cin 
+		
+		cout << "Input info: ";
+		//cin.ignore();
+		cin.getline(info, 100);
 
+		cout << "Input fine: ";
+		cin >> fine;
 	}
 
 };
