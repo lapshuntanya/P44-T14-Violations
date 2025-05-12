@@ -44,7 +44,7 @@ int main()
         default: cout << "Error!!!\n"; break;
         case 0: cout << "Good bye! =) \n"; break;
         case 1:
-            if (NDrivers == 0) cout << "List is empty!\n"; break;
+            if (NDrivers == 0) { cout << "List is empty!\n"; break; }
             for (int i = 0; i < NDrivers; i++)
             {
                 arrDrivers[i].printDriver();
