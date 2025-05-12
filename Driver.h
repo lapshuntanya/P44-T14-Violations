@@ -1,5 +1,6 @@
 #pragma once
 #include "Violation.h"
+#include "ArrayTemplate.h"
 
 struct  Driver
 {
@@ -30,5 +31,21 @@ struct  Driver
 			arrViol[i].printViol();
 		}
 		cout << "==================================\n";
+	}
+
+	void addNewViolation() {
+		Violation temp;
+		temp.fillViol();
+
+		addItemBack(arrViol, sizeViol, temp);
+	}
+
+	float calcTotalFines() {
+		float sum = 0;
+		for (int i = 0; i < sizeViol; i++)
+		{
+			sum += arrViol[i].fine;
+		}
+		return sum;
 	}
 };
