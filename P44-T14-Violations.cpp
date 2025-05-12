@@ -58,15 +58,21 @@ int main()
         case 3:
         {
             char car[10] = "";
+            int id = -1;
             cout << "Input number of car (AX0000AX): "; cin >> car;
             for (int i = 0; i < NDrivers; i++)
             {
                 if (_stricmp(arrDrivers[i].carNumber, car) == 0) {
-                    arrDrivers[i].printDriver();
-                    cout << "Final fine: " << arrDrivers[i].calcTotalFines() << endl;
+                    id = i;
                     break;
                 }
             }
+            if (id != -1) {
+                arrDrivers[id].printDriver();
+                cout << "Final fine: " << arrDrivers[id].calcTotalFines() << endl;
+            }
+            else
+                cout << "Not found!\n";
         }break;
         }
 
