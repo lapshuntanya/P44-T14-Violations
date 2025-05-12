@@ -15,7 +15,7 @@ struct Violation
 		dateViol.fillDate(); // cout+cin 
 		
 		cout << "Input info: ";
-		//cin.ignore();
+		cin.ignore();
 		cin.getline(info, 100);
 
 		cout << "Input fine: ";
@@ -25,5 +25,4 @@ struct Violation
 	void printViol() {
 		cout << "\t Date: " << dateViol.toString() << " Fine: " << fine << "UAH. => " << info << endl;
 	}
-
 };
